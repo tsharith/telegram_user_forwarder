@@ -1,71 +1,44 @@
-📢 Forward Mesej Telegram Tanpa Bot
-Script ini adalah untuk forward mesej dari satu channel atau group Telegram ke channel atau group lain tanpa menggunakan bot. Ia hanya menggunakan akaun Telegram biasa dengan login melalui nombor telefon.
+Forward Mesej Telegram Tanpa Bot
+Script ini direka untuk memindahkan mesej dari satu channel atau group Telegram ke channel atau group lain tanpa menggunakan bot. Ia hanya menggunakan akaun Telegram biasa dengan login melalui nombor telefon.
 
-🎯 Kegunaan:
-Forward mesej dari channel/group A ke channel/group B secara automatik.
+Kegunaan:
 
-Sesuai untuk backup mesej, memantau saluran Telegram atau menyimpan salinan mesej penting.
+Memindahkan mesej dari channel/group A ke channel/group B secara automatik.
 
-⚠️ Nota: Pastikan dapat kebenaran dari admin channel/group asal sebelum guna.
+Sesuai untuk membuat salinan sandaran mesej, memantau saluran Telegram, atau menyimpan mesej penting.
 
-🛠️ Keperluan:
+Nota: Pastikan anda mendapat kebenaran daripada admin channel/group asal sebelum menggunakannya.
+
+Keperluan:
+
 Python 3.x
 
-Library Telethon
+Pustaka Telethon
 
-API_ID dan API_HASH Telegram. Boleh dapatkan di sini: my.telegram.org
+API_ID dan API_HASH Telegram. Boleh dapatkan di my.telegram.org
 
-📥 Cara Pemasangan:
-Muat turun atau clone repo ini:
+Cara Pemasangan:
 
-bash
-Copy
-Edit
-git clone https://github.com/username/reponame.git
-cd reponame
-Pasang library Telethon:
+Muat turun atau clone repositori ini
 
-bash
-Copy
-Edit
-pip install telethon
-⚙️ Konfigurasi:
-Edit bahagian berikut dalam script telegram_user_forwarder.py:
+Pasang pustaka Telethon: pip install telethon
 
-python
-Copy
-Edit
-API_ID = 1234567                # Masukkan API ID anda
-API_HASH = "your_api_hash_here"  # Masukkan API Hash anda
-PHONE_NUMBER = "+60123456789"    # Nombor Telefon Telegram anda
+Konfigurasi: Edit bahagian berikut dalam script telegram_user_forwarder.py:
 
-SOURCE_CHAT = -1001234567890  # ID Channel/Group Asal
-TARGET_CHAT = -1009876543210  # ID Channel/Group Tujuan
-🔎 Cara Dapatkan ID Channel/Group:
-Guna bot @username_to_id_bot untuk dapatkan ID.
+API_ID = 1234567 # Masukkan API ID anda API_HASH = "your_api_hash_here" # Masukkan API Hash anda PHONE_NUMBER = "+60123456789" # Nombor Telefon Telegram anda SOURCE_CHAT = -1001234567890 # ID Channel/Group Asal TARGET_CHAT = -1009876543210 # ID Channel/Group Tujuan
 
-Atau, guna kod ini untuk dapatkan senarai ID:
+Cara Mendapatkan ID Channel/Group:
 
-python
-Copy
-Edit
-async for dialog in client.iter_dialogs():
-    print(f"{dialog.name} - {dialog.id}")
-🚀 Jalankan Script:
-Pastikan konfigurasi sudah betul.
+Guna bot @username_to_id_bot untuk mendapatkan ID.
 
-Run script:
+Atau, gunakan kod ini untuk mendapatkan senarai ID channel/group yang anda sertai:
 
-bash
-Copy
-Edit
-python telegram_user_forwarder.py
+async for dialog in client.iter_dialogs(): print(f"{dialog.name} - {dialog.id}")
+
+Cara Menjalankan Script:
+
+Pastikan semua konfigurasi telah diubah suai dengan betul.
+
+Jalankan script dengan arahan berikut: python telegram_user_forwarder.py
+
 Masukkan kod pengesahan Telegram jika diminta.
-
-⚠️ Penting:
-Jangan salah guna! Forward hanya dari channel/group yang anda ada kebenaran.
-
-Elakkan forward mesej dari channel/group sensitif atau tanpa izin.
-
-Telegram boleh sekat akaun jika ada laporan penyalahgunaan.
-
